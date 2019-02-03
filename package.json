@@ -1,0 +1,27 @@
+{
+  "name": "spacex-graphql-server",
+  "version": "1.0.0",
+  "description": "Application built on a graphql server that consumes the space-x api and displays it using React and Apollo on the front end.",
+  "main": "index.js",
+  "scripts": {
+    "start": "server.js",
+    "server": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trblackw/spacex-graphql-server.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/trblackw/spacex-graphql-server/issues"
+  },
+  "homepage": "https://github.com/trblackw/spacex-graphql-server#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "express": "^4.16.4",
+    "express-graphql": "^0.7.1",
+    "graphql": "^14.1.1"
+  }
+}
