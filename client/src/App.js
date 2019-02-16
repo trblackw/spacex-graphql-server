@@ -1,10 +1,12 @@
-import React, { Component } from "react";
+import React from "react";
 import "./App.css";
-import logo from "./spacex.png";
+import logo from "./spacexx.png";
 import styled from "styled-components";
 import ApolloClient from "apollo-boost";
 import { ApolloProvider } from "react-apollo";
 import Launches from "./components/Launches";
+import { Router } from "@reach/router";
+import LaunchDetails from "./components/LaunchDetails";
 
 const client = new ApolloClient({
   uri: "http://localhost:5000/graphql"
@@ -13,7 +15,10 @@ const App = () => (
   <ApolloProvider client={client}>
     <AppContainer>
       <img src={logo} alt="spacex-logo" />
-      <Launches />
+      <Router>
+        <Launches path="/" />
+        <LaunchDetails path="/:flight_number" />
+      </Router>
     </AppContainer>
   </ApolloProvider>
 );
